@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+body
+{
+	background:white;
+}
+.header {
+    background-color:transparent;
+    color: #ffffff;
+	width:100%;
+	position:relative;
+}
+
+.whiteR{background:transparent;color:white;padding:5px;font-family:impact;font-size:20px;}
+.blackR{background:transparent;color:#b0b5b3;padding:5px;font-family:impact;font-size:20px;}
+
+
+.tireImgLarge{
+	display:none;
+}
+
+.tireImgSmall:hover .tireImgLarge{
+	display:block;
+	z-index:1;
+}
+
+.lftHeadTxt{
+	font-family:impact;
+	color:#2196f3;
+	text-shadow:
+		1px 1px 1px #ffffff, 
+		3px 3px 3px #000000; 
+}
+
+#lftSide p{
+	font-family:verdana;
+}
+
+#lftSide li{
+	font-family: comic sans ms;
+}
+
+
+.tireClass{
+	background:linear-gradient(#000002,#2196f3);
+	border:2px solid;
+}
+
+#tireImgBod{padding-top:10px; padding-bottom:10px;}
+
+@media only screen and (min-width: 300px) 
+{
+	.headimg{height:130px;}
+	#tireImgBod{display:none;opacity:0;transition: opacity 0.8s;}
+
+
+	#main {margin-left:10px; margin-right:10px;}
+	
+	#contctAddreAreasLeft{float:left;width:100%;padding:10px;color:gray;}
+	#contctAddreAreasRight{float:right;width:100%;padding:10px;color:gray;}
+
+	#googleMapBody iframe{width:100%;height:200px;}
+	#callDownButton{display:block; position:fixed; bottom:0;z-index:1;
+		width:100%;padding:25px;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNjAgNjAiPjxwYXRoIGQ9Ik03LjEwNCAxNC4wMzJsMTUuNTg2IDEuOTg0YzAgMC0wLjAxOSAwLjUgMCAwLjk1M2MwLjAyOSAwLjc1Ni0wLjI2IDEuNTM0LTAuODA5IDIuMSBsLTQuNzQgNC43NDJjMi4zNjEgMy4zIDE2LjUgMTcuNCAxOS44IDE5LjhsMTYuODEzIDEuMTQxYzAgMCAwIDAuNCAwIDEuMSBjLTAuMDAyIDAuNDc5LTAuMTc2IDAuOTUzLTAuNTQ5IDEuMzI3bC02LjUwNCA2LjUwNWMwIDAtMTEuMjYxIDAuOTg4LTI1LjkyNS0xMy42NzRDNi4xMTcgMjUuMyA3LjEgMTQgNy4xIDE0IiBmaWxsPSIjY2QwODA4Ii8+PHBhdGggZD0iTTcuMTA0IDEzLjAzMmw2LjUwNC02LjUwNWMwLjg5Ni0wLjg5NSAyLjMzNC0wLjY3OCAzLjEgMC4zNWw1LjU2MyA3LjggYzAuNzM4IDEgMC41IDIuNTMxLTAuMzYgMy40MjZsLTQuNzQgNC43NDJjMi4zNjEgMy4zIDUuMyA2LjkgOS4xIDEwLjY5OWMzLjg0MiAzLjggNy40IDYuNyAxMC43IDkuMSBsNC43NC00Ljc0MmMwLjg5Ny0wLjg5NSAyLjQ3MS0xLjAyNiAzLjQ5OC0wLjI4OWw3LjY0NiA1LjQ1NWMxLjAyNSAwLjcgMS4zIDIuMiAwLjQgMy4xMDVsLTYuNTA0IDYuNSBjMCAwLTExLjI2MiAwLjk4OC0yNS45MjUtMTMuNjc0QzYuMTE3IDI0LjMgNy4xIDEzIDcuMSAxMyIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==) center/50px 50px no-repeat #ff3a3a;
+	}
+	.footer {
+		background-color: #ffffffff;
+		color: black;
+		text-align: center;
+		font-size: 12px;
+		padding-top: 15px;
+		padding-bottom: 70px;
+	}
+
+
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+	.headimg{height:150px;}
+	#tireImgBod{display:none;opacity:0;transition: opacity 0.8s;}
+	#googleMapBody iframe{width:300px;height:200px;}
+
+	
+	#main {margin-left:20px; margin-right:20px;}
+
+	#contctAddreAreasLeft{float:left;width:100%;padding:10px;color:gray;}
+	#contctAddreAreasRight{float:right;width:100%;padding:10px;color:gray;}
+	
+	#callDownButton{display:none}
+	.footer {
+		background-color: #ffffffff;
+		color: black;
+		text-align: center;
+		font-size: 12px;
+		padding: 15px;
+	}
+
+}
+
+
+
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+	.headimg {height:300px;}
+	#tireImgBod{display:block;opacity:1; transition: opacity 0.8s;}
+	#googleMapBody iframe{width:300px;height:200px;}
+	
+	
+	#dsktpSlid {width:40%;float:right;}
+	#main {margin-left:40px; margin-right:40px;}
+	#lftSide {text-align:left;width:50%;}
+
+	#contctAddreAreasLeft{float:left;width:55%;padding:10px;color:gray;}
+	#contctAddreAreasRight{float:right;width:45%;padding:10px;color:gray;}
+
+	#callDownButton{display:none}
+	.footer {
+		background-color: #ffffffff;
+		color: black;
+		text-align: center;
+		font-size: 12px;
+		padding: 15px;
+	}
+
+}
+
+
+}
+
+</style>
+	<link rel="stylesheet" href="ImageSlideStyle.css">
+</head>
+<body style = "">
+	<div id = "phoneNumHead" style = "position:sticky;top:0px;text-align:center;color:white;z-index:1;font-size:20px;
+		font-family:calibri;font-style:italic;background:#da0000;
+	">713-533-2218</div>
+	<div class="header" style = "background:white;border-bottom: 1px solid black;position:relative;">
+		<center>
+			<img class = "headimg" src = "logo/alphaOmegaLogo_01.png" style = "width:80%;"/>
+		</center>
+	</div>
+<br>
+
+<div id = "main">
+	<center>
+		<div id = "dsktpSlid">
+			<div id = "slideImgMainContainer" style = "position:relative; width:100%;height:400px;overflow:hidden;background-image:url('slides/1.jpg');
+				background:-repeat:no-repeat;background-size:100% 100%;
+				box-shadow:5px 5px 5px rgba(0,0,0,0.9);
+				border-top-right-radius:15px;
+				border-top-left-radius:15px;
+				border-bottom-left-radius:15px;
+				border-bottom-right-radius:15px;
+			">
+			</div>
+			<br>
+			<br>
+			<span id = "sldTxt" style = "font-family:impact;font-size:20px;display:block;
+			color:#000000;
+			text-shadow:
+			1px 1px 1px #ffffff,
+			3px 3px 1px #616161;">
+				Amazing waiting area with entertainment games and drinks while you wait for the services to finish and many tires from used to new and some spare rims.
+			</span>
+			<br>
+			<br>
+			<div class = "tireClass" style = "position:relative">
+				<div id = "tireHdTxt" onclick = "tiresDropdownFunc()"><button id = "tireBtn" style = "background:transparent;border:none;width:100%;color:white;font-family:calibri;font-size:20px;"><strong>AVAILABLE TIRE SIZES</strong><select style = "background-color:transparent;border:none;"></select></button></div>
+				<div id = "tireImgBod" >
+					<span class = "whiteR">R13</span> 
+					<span class = "blackR">R14</span>
+					<span class = "whiteR">R15</span>
+					<span class = "blackR">R16</span>
+					<span class = "whiteR">R17</span>
+					<span class = "blackR">R18</span>
+					<span class = "whiteR">R19</span>
+					<span class = "blackR">R20</span>
+					<span class = "whiteR">R22</span>
+					<span class = "blackR">R24</span>
+					<span class = "whiteR">R26</span>
+				</div>
+			</div>
+			<script>
+				
+				var isDropDownOpen = new Boolean(false);
+
+//				window.addEventListener("orientationchange", function(){tiresDropdownFunc();}, false);
+				function tiresDropdownFunc()
+				{
+					if(window.screen.width >= "800")
+					{
+						isDropDownOpen = new Boolean(true);
+						document.getElementById("tireImgBod").style.display = "block";
+						document.getElementById("tireImgBod").style.opacity = 1;
+					}
+					else
+					{
+					
+						var t;
+							
+						if(isDropDownOpen == false)
+						{
+							document.getElementById("tireImgBod").style.display = "block";
+							 t = setTimeout(tireListTrans, 0010);
+							isDropDownOpen = new Boolean(true);
+						}
+						else
+						{
+							document.getElementById("tireImgBod").style.display = "none";
+							document.getElementById("tireImgBod").style.opacity = 0;
+							clearTimeout(t);
+							isDropDownOpen = new Boolean(false);
+						}
+					}
+				}
+				
+				function tireListTrans()
+				{
+					document.getElementById("tireImgBod").style.opacity = 1;
+				
+				}
+				
+			</script>
+			<br>
+			<h2 ><strong>ROADSIDE ASSISTANCE <br> Call 713-533-2218 NOW!</strong></h2>
+		</div>
+	</center>
+
+	<div id = "lftSide">
+		<h2 class = "lftHeadTxt"><strong>GET TONY'S ROADSIDE ASSISTANCE SERVICES IN A JIFFY!</strong></h2>
+			<p style = "text-indent:50px;">
+				If you've ever been stuck on the road when a car ran out of fuel,
+				you know how hard it can be to get help late at night. Walking along a dark road in hopes of finding a fuel station can be dangerous,
+				and waiting on hold with the customer service from your roadside assistance club can be frustrating. <strong>TONY'S ROADSIDE ASSISTANCE</strong>
+				will come to the rescue.  CALL <strong>713-533-2218 Now</strong>
+			</p>
+			<br><br>
+		<h2 class = "lftHeadTxt"><strong>HOW TONY'S ROADSIDE ASSISTANCE WORKS</strong></h2>
+			<p style = "text-indent:50px;">
+				TONY'S ROADSIDE ASSISTANCE service provides assistance with a car that ran out of gas and has a flat tire.
+				Simply click the button at the bottom of the screen on your mobile device and <strong>TONY'S ROADSIDE ASSISTANCE</strong> will come to the rescue. CALL
+				<strong> 713-533-2218 Now</strong> We strive to match the level of service of your needs, we save you money. With a low fuel light indicating empty, 
+				you'll only pay for a service van with emergency gasoline instead of a high-priced tow.
+			</p>
+
+			<br><br>
+		<h2 class = "lftHeadTxt"><strong>WHY CHOOSE TONY'S ROADSIDE ASSISTANCE?</strong></h2>
+			<p style = "text-indent:50px;">
+				TONY'S ROADSIDE prioritizes your time and your personal safety by connecting you to help directly to the source without putting you on hold with dispatchers. Perfect for students, families,
+				travelers, and working professionals, only TONY'S ROADSIDE ASSISTANCE gives you on-demand help without requiring advance payment for service you may never need. CALL <strong> 713-533-2218 Now </strong>
+			</p>
+		
+			<br><br>
+		<h2 class = "lftHeadTxt"><strong>TONY'S ROADSIDE ASSISTANCE IS:</strong></h2>
+			
+			<ul>
+				<li>Transparent and affordable – With <strong>TONY'S ROADSIDE ASSISTANCE, you’ll never be shocked over the price of roadside assistance.</strong> </li>
+				<li>Fast – In many cases, <strong>TONY'S ROADSIDE ASSISTANCE</strong> can provide assistance 50 percent faster than comparable roadside assistance clubs. 
+					You’ll be updated within minutes and you won’t be kept waiting late at night. </li>
+				<li>Pasadena and surrounding locations – We are able to be wherever you are in need of our services within this area.</li>
+				<li>Having a backup plan like your friendly neighborhood <strong>TONY'S ROADSIDE ASSISTANCE</strong> 
+				always at your service if something goes wrong with your car can provide you with peace of mind that you won’t be stranded in the middle of nowhere without any gas and
+				flat tires. <strong>TONY'S ROADSIDE ASSISTANCE</strong> sends you help faster when you need it most.  
+				CALL <strong>713-533-2218 Now</strong> </li>
+
+			</ul>
+			
+		
+			<br><br>
+	</div>
+	
+	
+	<div id = "contctAddreAreasLeft">
+		<span><strong>CONTACT US</strong></span>   	
+		<br>
+		<br>
+		<span><strong>Phone<br>713-533-2218</strong></span>
+		<br>
+		<br>
+		<span ><strong>Address</strong></span>
+		<br>
+		<span>
+			1712 Shaver St.
+		<br>
+			Pasadena, TX 77502
+		</span>
+	</div>
+	
+	<div>
+	<div id = "contctAddreAreasRight">
+		<span><strong>Service Areas:</strong><br> 
+		Pasadena, Baytown, La Porte, Channelview, Cloverleaf, Highlands, Galena Park, Jacinto City</span>
+		<br>
+		<br>
+		<span>
+		<strong>PROUDLY SERVING:</strong>
+		<br>
+		Baytown 77520, 77521, 77522 – Deer Park 77536 –  La Porte 77571, 77572 – Pasadena 77501, 77502, 77503, 77504, 77505, 77506 77507, 77508 – Channelview 77530 – Cloverleaf 77015 – Highlands 77562 – Galena Park 77547 – Jacinto City 77029
+		</span>
+
+	</div>
+	</div>
+	
+	<div id = "googleMapBody" style = "border-top:1px solid;border-color:rgba(0,0,0,0.2);border-bottom: 1px solid #bfbfbf;">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27729.257530620256!2d-95.209317!3d29.686222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640980a719b8d6b%3A0x64584659ac2b10c8!2s1712%20Shaver%20St%2C%20Pasadena%2C%20TX%2077502%2C%20USA!5e0!3m2!1sen!2sph!4v1581772970508!5m2!1sen!2sph" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+
+</div>
+
+<a id = "callDownButton" href="" onclick = "window.open('tel:7132314768')"></a>
+
+<div class="footer">
+	<span id = "testtt" style = "color:#808080;font-family:arial;">© 2020 ALPHA-OMEGA-TIRE-SHOP</span>
+</div>
+
+<script src = "ImageSlide.js" type = "text/javascript"></script>
+</body>
+
+</html>
